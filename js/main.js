@@ -49,6 +49,36 @@ elForm.addEventListener("submit" , function(event){
 
 
     function people() {
+        var hour = Math.floor(elValue / Person);
+        var minute = Math.floor((elValue / Person - hour) * 60);
+        var second = Math.floor(((elValue / Person - hour) * 60 - minute) * 60);
+        return hour + ' soat ' + minute + ' minut ' + second + 'secund';
+    }
+
+
+    function velo() {
+        var hour = Math.floor(elValue / Velosiped);
+        var minute = Math.floor((elValue / Velosiped - hour) * 60);
+        var second = Math.floor(((elValue / Velosiped - hour) * 60 - minute) * 60);
+        return hour + ' soat ' + minute + ' minut ' + second + 'secund';
+    }
+
+    function car() {
+        var hour = Math.floor(elValue / Mashina);
+        var minute = Math.floor((elValue / Mashina - hour) * 60);
+        var second = Math.floor(((elValue / Mashina - hour) * 60 - minute) * 60);
+        return hour + ' soat ' + minute + ' minut ' + second + 'secund';
+    }
+
+
+    function airplane() {
+        var hour = Math.floor(elValue / Plane);
+        var minute = Math.floor((elValue / Plane - hour) * 60);
+        var second = Math.floor(((elValue / Plane - hour) * 60 - minute) * 60);
+        return hour + ' soat ' + minute + ' minut ' + second + 'secund';
+    }
+    /*
+    function people() {
         return elValue/Person;
     }
     function velo() {
@@ -64,11 +94,11 @@ elForm.addEventListener("submit" , function(event){
     }
 
 
+*/
 
 
-
-    elMan.textContent = Math.round(people());
-    elValo.textContent = Math.round(velo());
-    elCar.textContent = Math.round(car());
-    elAirplane.textContent = Math.round(airplane());
+    elMan.textContent = people();
+    elValo.textContent = (velo());
+    elCar.textContent = (car());
+    elAirplane.textContent =/* Math.round(airplane());*/ airplane();
 })
